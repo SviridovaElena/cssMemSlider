@@ -134,16 +134,8 @@ input#radio-btn2:checked ~ .img-frame .frames {
   transform: translate(-20%);
 }
 
-.frames {
+input#radio-btn3:checked ~ .img-frame .frames {
   transform: translate(-40%);
-}
-
-input#radio-btn4:checked ~ .img-frame .frames {
-  transform: translate(-60%);
-}
-
-input#radio-btn5:checked ~ .img-frame .frames {
-  transform: translate(-80%);
 }
 
 input#radio-btn1:checked ~ .bottom .txt-frame .frame {
@@ -156,4 +148,39 @@ input#radio-btn2:checked ~ .bottom .txt-frame .frame {
 
 input#radio-btn3:checked ~ .bottom .txt-frame .frame {
   transform: translate(-200%);
+}
+
+@media (max-width: 768px) {
+  .body {
+    padding: 4vw;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+  }
+
+  .slider {
+    padding: 1vw;
+  }
+
+  .img-frame .frames .frame img {
+    max-height: 70vh;
+    max-width: 90vw;
+    object-fit: scale-down;
+  }
+
+  .bottom {
+    padding-top: 2vw;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    gap: 0;
+  }
+
+  .control-frame {
+    display: flex;
+    justify-content: center;
+  }
+
+  .control {
+    width: 3.5rem;
+  }
 }
